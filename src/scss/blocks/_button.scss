@@ -48,8 +48,18 @@
       background: linear-gradient(180deg, transparent, var(--game-accent));
     }
   }
+}
 
-  &:hover {
+@media (hover: none) {
+  .button {
+    box-shadow: 0 0 10px var(--game-accent), 0 0 20px var(--game-accent);
+    background-color: var(--game-accent);
+    color: var(--black);
+  }
+}
+
+@media (hover: hover) {
+  .button:hover {
     box-shadow: 0 0 10px var(--game-accent), 0 0 20px var(--game-accent), 0 0 40px var(--game-accent);
     background-color: var(--game-accent);
     color: var(--black);

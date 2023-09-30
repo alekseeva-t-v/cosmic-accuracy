@@ -34,7 +34,7 @@ function showGame() {
           <h2 class="game__title">Космическая меткость</h2>
           <p class="game__text">
             Отличная возможность проверить насколько метко и быстро ты попадаешь
-            по предметам на экране. Коснись всех планет: больших и маленьких, и
+            по предметам на экране. Коснись всех планет, больших и маленьких, и
             установи новый рекорд
           </p>
           <a class="game__button button" id="settings-btn" href="#">
@@ -176,6 +176,9 @@ function showGame() {
 
       settingsBtn.addEventListener('click', (event) => {
         event.preventDefault();
+        addMarkup(screenSecond, createSettingsScreen());
+        addFunctionaliatySettingsScreen();
+
         screenFirst.classList.add('up');
         screenFirst.innerHTML = '';
       });
@@ -343,15 +346,13 @@ function showGame() {
   }
 
   addMarkup(screenFirst, createStartScreen());
-  addMarkup(screenSecond, createSettingsScreen());
   addFunctionaliatyStartScreen();
-  addFunctionaliatySettingsScreen();
 
   btnSound.addEventListener('click', () => {
     btnSound.classList.toggle('sound-btn--active');
 
     sound = !sound;
-    console.log(sound)
+    console.log(sound);
   });
 }
 

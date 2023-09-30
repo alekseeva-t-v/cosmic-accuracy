@@ -1,6 +1,6 @@
 .game {
   min-width: 300px;
-  height: calc(100vh - 104px);
+  height: calc(100vh - 88px);
   padding: 50px;
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
@@ -56,13 +56,6 @@
     text-align: left;
     color: #ffffff;
     animation-name: RightToLeft;
-    animation-duration: 2s;
-    animation-delay: 0.7s;
-    animation-timing-function: ease;
-  }
-
-  &__button {
-    animation-name: BottomToTop;
     animation-duration: 2s;
     animation-delay: 0.7s;
     animation-timing-function: ease;
@@ -159,7 +152,6 @@
 }
 
 
-
 @keyframes RightToLeft {
   0% {
     opacity: 0;
@@ -206,6 +198,16 @@
   font-weight: 700;
   color: #ffda22;
 }
+
+@media (hover: hover) {
+  .game__button {
+    animation-name: BottomToTop;
+    animation-duration: 2s;
+    animation-delay: 0.7s;
+    animation-timing-function: ease;
+  }
+}
+
 
 @media (max-width: 992px) {
   .game {
